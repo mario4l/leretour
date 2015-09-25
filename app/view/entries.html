@@ -1,0 +1,7 @@
+<a href='/#/journal'>
+    <button class="journal-button">Journal</button>
+</a>
+
+<div class="entry-text" ng-repeat="entry in journalEntries">
+    <div ng-bind-html="entry.text | unsafe"></div>
+</div>

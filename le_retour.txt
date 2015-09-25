@@ -1,0 +1,26 @@
+le retour 
+or “the journey back”
+
+will take you back to a time where things were simpler. 
+this world is your journal, take it with you, share your experiences. 
+write as much or as little as you’d like. share you experience with the world. 
+
+le retour is an app that everyone can use. no fancy pictures, gifs, or layouts. simply sign up and let your words run free. share your journey and follow others throughout theirs. <3
+
+- “Words are flowing out like endless rain into a paper cup, They slither wildly as they slip away across the universe”
+
+
+<input class="btn" type="button" value="Sign Up">
+
+
+
+input.btn {
+    width: 100%;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+
