@@ -1,0 +1,52 @@
+
+Title (Optional)
+
+	[Public][Private][Group]
+	Dropdown Menu
+
+
+
+	Text…..
+
+
+<head>
+</head>
+
+<body class="main">
+
+    <form style="margin-top: 175px">
+
+        <text-angular class="ang-text"  ng-model="journalText.text"rows="50">
+
+
+
+        </text-angular>
+
+
+
+    </form>
+    <a href='/#entries'>
+        <button class="submit">Save</button>
+    </a>
+
+
+</body>
+	
+
+
+
+
+textarea {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 15%;
+    resize: none;
+    margin-bottom: 2%;
+    font-size: 14px;
+}
+
+
+
+
+											[Save]
