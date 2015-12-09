@@ -32,7 +32,7 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 	};
 
 	$scope.publicEntry = function(publicEntry) {
-		
+		//comment
 		journalService.publicEntry(publicEntry);
 		$location.path('/public');
 	};
