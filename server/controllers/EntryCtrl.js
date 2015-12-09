@@ -24,16 +24,15 @@ module.exports = {
 		});
 	},
 	update: function (req, res) {
-		Entry.findByIdAndUpdate(req.body.id, req.body.updatedEntry, { new: true }, function (err, result) {
+		Entry.findByIdAndUpdate(req.params.id, req.body, { new: true }, function (err, result) {
 			if (err) { res.send(err) }
 			else { res.json(result) }
-		})
+		});
 	},
 	delete: function (req, res) {
 		Entry.findByIdAndRemove(req.params.id, function (err, result) {
-			if (err) { res.send(err) }
-			else { res.json(result) }
-		})
+			if (err) res.send(err);
+			else res.json(result);
+		});
 	}
-
-}
+};

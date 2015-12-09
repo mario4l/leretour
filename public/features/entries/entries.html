@@ -1,0 +1,60 @@
+<div ng-controller='entriesCtrl'>
+
+
+
+    <div class="dropdown">
+        <button><img alt="brand" src="shared/images/treegreen.jpg" class="logo-controller"></button>
+        <ul class="dropdown-menu">
+            <li><a href="/#/journal/entries/new">Journal</a></li>
+            <hr/>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+    <span class="entry-user-name">{{userName}}</span>
+
+
+    <span class="entry-header-text">LE RETOUR</span>
+
+    <!--<div class="user-container-two">
+        
+        <div class="user-name-two">
+            {{userName}}
+        </div>
+
+    </div>-->
+
+
+
+
+
+
+    <div class="white-space">
+        <p class="le-title"></p>
+    </div>
+
+
+
+    <div class="flex-log">
+
+        <div class="log-container">
+
+            <mini-entry ng-repeat="entry in journalEntries" class="entry-container">
+                <div class="entry-flex">
+                    <button ng-click="setCurrentEntry(entry)" class="edit-button">Read</button>
+
+                    <p class="title">{{entry.title}}</p>
+
+                    <hr/>
+                    <p class="content"> {{entry.content}}</p>
+
+                </div>
+
+            </mini-entry>
+        </div>
+
+    </div>
+    <!--<button ng-click="getCurrentEntry()">HI BUTTON</button>
+      {{ currentEntry }}-->
+    <!--<button ng-click="readCurrentEntry(entry)" class="read-button">Read</button>-->
+
+</div>

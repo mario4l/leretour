@@ -1,0 +1,59 @@
+
+
+
+<!--create a div color grey ---->
+<div class="dropdown">
+<button><img alt="brand" src="shared/images/treegreen.jpg" class="logo-controller"></button>
+<ul class="dropdown-menu">
+    <li><a href="/#/journal/entries/new">Journal</a></li>
+    <hr />
+    <li><a href="/#/journal/entries">Entries</a></li>
+    <hr/>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+</div>
+
+<a href="/#signUp" class="public-header-two">  LE RETOUR</a>
+
+<div class="user-container">
+
+    
+    <div class="user-name">
+
+        {{userName}}
+    </div>
+
+
+</div>
+
+<!--<a href="/#/entries">
+    <img alt="brand" src="/images/treegreen.jpg" class="navbar-logo">
+</a>-->
+
+<!-- Create the toolbar container -->
+
+
+
+<!--<img src="/images/treegreen.jpg" class="logo-two">-->
+
+
+
+
+
+<div class="container">
+ 
+        <input  disabled class="new-title" type="text" placeholder="Title" ng-model='journalText.title'>
+
+        <textarea disabled placeholder="Log journal here" class="user-journal" ng-model="journalText.content" rows="12">
+        </textarea>
+        <hr/>
+        <!--<button type="submit" ng-click="postEntry(journalText)" class="save-btn">Save</button>
+        <button type="submit" ng-click="updateEntry(journalText)" class="update-btn">Update</button>
+        <i><button type="submit" ng-click="deleteEntry(journalText)" class="fa fa-trash"></button></i>
+        <button type="submit" ng-click="publicEntry(entry)">Public</button>-->
+        <div class="stretch"></div>
+        
+        <!--{{ journalText }}-->
+</div>        
+
+
