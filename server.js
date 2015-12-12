@@ -89,6 +89,10 @@ app.get('/amiauthenticated', function(req, res){
 app.get('/entry/public/:id',PublicCtrl.publicRead);
 app.post('/entry/public', PublicCtrl.publicPost);
 
+// var publicEntry = Schema ({
+
+    
+// });
 
 
 

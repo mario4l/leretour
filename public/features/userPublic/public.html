@@ -20,7 +20,7 @@
     
     <div class="user-name">
 
-        {{userName}}
+        {{journalText.creator.name}}
     </div>
 
 
@@ -42,9 +42,9 @@
 
 <div class="container">
  
-        <input  disabled class="new-title" type="text" placeholder="Title" ng-model='journalText.title'>
+        <input  disabled class="new-title" type="text" placeholder="Title" ng-model='journalText.entry.title'>
 
-        <textarea disabled placeholder="Log journal here" class="user-journal" ng-model="journalText.content" rows="12">
+        <textarea disabled placeholder="Log journal here" class="user-journal" ng-model="journalText.entry.content" rows="12">
         </textarea>
         <hr/>
         <!--<button type="submit" ng-click="postEntry(journalText)" class="save-btn">Save</button>

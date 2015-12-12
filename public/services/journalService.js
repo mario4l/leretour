@@ -43,18 +43,26 @@ app.service('journalService', function ($http, $q) {
 			.then(function (res) {
 				console.log(res);
 			});
-	};
+	}
 	
-	this.publicEntry = function (journalText){
-		
+	this.getPublicEntry = function (entryId){
 		return $http({
 			method: "GET",
-			url: "/entry/" + journalText._id,
-			data: journalText
+			url: "/entry/public/" + entryId
 		})
 			.then(function (res) {
-				console.log(res);
+				console.log('Server Gave Us: ', res);
+				return res;
 			});
+	};
+	
+	this.postPublicPost = function (publicPost){
+		
+		return $http.post("/entry/public", publicPost);
+		// .then(function (res){
+		// 	console.log(res);
+		// 	return res.data;
+		// });
 	};
 	
 

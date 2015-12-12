@@ -6,14 +6,14 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 		$scope.journalText = journalService.getCurrentEntry();
 	};
 
-	$scope.updateEntry=function(journalText) {
+	$scope.updateEntry = function (journalText) {
 		journalService.updateEntry(journalText);
 		$location.path('journal/entries');
 	};
-	
-	$scope.deleteEntry = function(journalText) {
+
+	$scope.deleteEntry = function (journalText) {
 		journalService.deleteEntry(journalText);
-		
+
 		$location.path('journal/entries');
 	};
 	
@@ -31,10 +31,16 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 		$location.path('journal/entries');
 	};
 
-	$scope.publicEntry = function(publicEntry) {
-		//comment
-		journalService.publicEntry(publicEntry);
-		$location.path('/public');
+	$scope.publicEntry = function (entry) {
+		console.log(entry);
+		var publicEntry = {
+			creator: $scope.userId,
+			entry: entry._id
+		};
+		journalService.postPublicPost(publicEntry).then(function (res){
+		$location.path('/public/' + res.data._id);
+			
+		});
 	};
 
 
@@ -42,6 +48,7 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 
 	authService.getUser().then(function (res) {
 		$scope.userName = res.data.name;
+		$scope.userId = res.data._id;
 	});
 	
 

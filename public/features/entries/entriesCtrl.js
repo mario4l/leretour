@@ -24,6 +24,7 @@ app.controller('entriesCtrl', function ($scope, journalService, $location, authS
 		$scope.userName = res.data.name;
 	});
 
+
 });
 
 

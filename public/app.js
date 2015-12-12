@@ -22,9 +22,9 @@ app.config(function($routeProvider){
         templateUrl: "features/entries/entries.html",
         controller: 'entriesCtrl'
     })
-    .when('/public', {
+    .when('/public/:id', {
         templateUrl: "features/userPublic/public.html",
-        controller: 'journalCtrl'
+        controller: 'publicCtrl'
     })
     .otherwise({redirectTo:'/signUp'});
     

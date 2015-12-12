@@ -829,6 +829,20 @@ form {
    
 
 }
+.entry-public-button {
+    margin-top: 4px;
+    float: right;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 11px;
+    border-radius: 3px;
+    background: none;
+    color: black;
+    border: 1px solid whitesmoke;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
 .edit-button {
     margin-top: 4px;
     float: right;
