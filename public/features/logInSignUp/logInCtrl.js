@@ -18,9 +18,15 @@ app.controller('loginCtrl', function ($scope, authService, $location) {
 
 
 			authService.logIn(user).then(function (response) {
-				console.log(response);
+				console.log('login response: ',response);
 				// alert("Thanks for logging in");
-				return $location.path('/journal/entries/new');
+				if(response) {
+					if(response.status === 200) {
+						return $location.path('/journal/entries/new');
+					}
+				} else {
+					alert('Invalid Login');
+				}
 			});
 		
 	};
