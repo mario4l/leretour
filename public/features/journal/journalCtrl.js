@@ -32,13 +32,14 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 	};
 
 	$scope.publicEntry = function (entry) {
-		console.log(entry);
+		console.log("yo fire", entry);
 		var publicEntry = {
 			creator: $scope.userId,
 			entry: entry._id
 		};
 		journalService.postPublicPost(publicEntry).then(function (res){
-		$location.path('/public/' + res.data._id);
+			console.log("Going To : ", res.data._id);
+			$location.path('/public/' + res.data._id);
 			
 		});
 	};
