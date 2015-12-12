@@ -65,6 +65,7 @@ app.post('/login', passport.authenticate('local-login'), function(req, res) {
 
 
 app.get('/users', UserCtrl.me);
+app.get('/currentUser', currentUser);
 // app.put
 app.post('/users', UserCtrl.create);
 // app.delete
@@ -115,6 +116,12 @@ function isAuth(req, res, next) {
    	// if they aren't redirect them to the home page
     	res.status(403).send('not allowed');
     }
+}
+
+function currentUser(req, res){
+    if(req.isAuthenticated()){
+        res.json(req.user);
+    }else res.status(401).send(null);
 }
 
 app.use(express.static('./public'));

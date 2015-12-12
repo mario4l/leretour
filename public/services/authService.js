@@ -35,5 +35,17 @@ app.service('authService', function ($http, $location) {
 			return res;
 		});
 	};
-
+	
+	this.forceLogIn = function () {
+		console.log('forcing login');
+			return $http({
+				method: "GET", url: "/currentUser"
+			}).then(function(res){
+				console.log('They passed');
+				return res;
+			}, function(err) {
+				console.log('they failed');
+				$location.path('/signUp');
+			});
+	};
 });
