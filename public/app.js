@@ -34,12 +34,8 @@ app.config(function ($routeProvider) {
         })
         .when('/public/:id', {
             templateUrl: "features/userPublic/public.html",
-            controller: 'publicCtrl',
-            resolve: {
-                logInInfo: function (authService) {
-                    return authService.forceLogIn();
-                }
-            }
+            controller: 'publicCtrl'
+
         })
         .otherwise({ redirectTo: '/signUp' });
 
