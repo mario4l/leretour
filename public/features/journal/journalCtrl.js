@@ -7,14 +7,20 @@ app.controller('journalCtrl', function ($scope, journalService, authService, $lo
 	};
 
 	$scope.updateEntry = function (journalText) {
+		if (confirm("Update this Journal Entry?")) {
 		journalService.updateEntry(journalText);
 		$location.path('journal/entries');
+		}
+		return false;
 	};
 
 	$scope.deleteEntry = function (journalText) {
+		if (confirm("Are you sure you want to delete this?")) {
 		journalService.deleteEntry(journalText);
-
+		
 		$location.path('journal/entries');
+		}
+		return false;
 	};
 	
 	// $scope.publicEntry=function(entry) {
